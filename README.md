@@ -11,12 +11,9 @@ Review them until they stick. Then prove it: in the **Versus arena**, players
 pool words from their own decks and race to fill in the blanks.
 
 <p align="center">
-  <img src="site/img/player_preview_light.gif#gh-light-mode-only" width="30%">
-  <img src="site/img/player_preview_dark.gif#gh-dark-mode-only" width="30%">
-  <img src="site/img/card_review_preview_light.gif#gh-light-mode-only" width="30%">
-  <img src="site/img/card_review_preview_dark.gif#gh-dark-mode-only" width="30%">
-  <img src="site/img/versus_preview_light.gif#gh-light-mode-only" width="30%">
-  <img src="site/img/versus_preview_dark.gif#gh-dark-mode-only" width="30%">
+  <img src="site/img/player_preview_light.gif" width="30%">
+  <img src="site/img/card_review_preview_light.gif" width="30%">
+  <img src="site/img/versus_preview_light.gif" width="30%">
 </p>
 
 ## Dependencies
