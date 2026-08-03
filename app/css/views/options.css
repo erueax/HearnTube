@@ -1,0 +1,78 @@
+/*
+*	Options view.
+*/
+
+#options-contaier {
+	font-size: 1.1rem;
+	margin-top: 0.5rem;
+	padding: 0.75rem;
+
+	width: 100%;
+
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#options-contaier > h1 {
+	margin: 0;
+	margin-bottom: 2rem; 
+	color: var(--color-text);
+}
+
+#options-contaier > .options-row {
+	display: flex;
+	flex-flow: row nowrap;
+
+	height: 50px;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	/* border: 2px solid var(--color-accent-light); */
+	padding: 0.2rem;
+
+	justify-content: space-between;
+	align-items: center;
+	/* gap: 0.5rem; */
+}
+
+#options-contaier > .options-row > p,
+#options-contaier > .options-row > button {
+	margin: 0;
+}
+
+#options-contaier > .options-row > p {
+	min-width: 0;
+	overflow-wrap: break-word;
+}
+#options-contaier > .options-row > .options-inline {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+	gap: 2px;
+	height: 100%;
+}
+
+#options-contaier > .options-row > .options-inline > button,
+#options-contaier > .options-row > .options-inline > input {
+    margin: 0;
+}
+
+#options-contaier > .options-row button {
+	/*padding: 0.35rem 0.5rem;*/
+	margin-right: 0.3rem;
+	height: 100%;
+	margin: 0;
+}
+
+#options-contaier > .options-row > .opt-button {
+	width: 100%;
+}
+
+@media (min-width: 35rem) {
+	#options-contaier { font-size: 1.2rem; }
+
+	#options-contaier > .options-row > button {
+		padding: 0 2px;
+	}
+}

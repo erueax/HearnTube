@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HearnTube</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/landing.css">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main class="landing">
+		<div class="landing-header">
+			<h1>HearnTube</h1>
+			<a href="/app/home"><button>Go to App</button></a>
+		</div>
+		<div class="landing-content">
+			<p>Learn Japanese from the videos you'd like to watch.</p>
+
+			<p>
+				Paste a YouTube link and HearnTube turns its subtitles into an
+				interactive transcript. Tap any word to see its reading and dictionary
+				entry, then save the ones you want to study later, along with the clip and audio they came from. Later you can review them in a spaced-repetition deck powered by FSRS.
+			</p>
+
+
+			<p>
+				Review them until they stick. Then prove it: in the Versus arena, players
+				pool words from their own decks and race to fill in the blanks.
+			</p>
+
+			<a class="landing-content-button" href="/app/home"><button>Go try it now!</button></a>
+
+			<h2>How it works</h2>
+			<ol>
+				<li>Paste a link. Its subtitles become a transcript that scrolls in time with the video.</li>
+				<li>Tap a word. See its reading and every dictionary sense; words are segmented for you.</li>
+				<li>Keep the good ones. A saved word becomes a card, stored with the line, clip, and audio it appeared in.</li>
+
+				<figure class="shot">
+					<picture>
+						<source srcset="img/player_preview_dark.gif"  media="(prefers-color-scheme: dark)">
+						<source srcset="img/player_preview_light.gif" media="(prefers-color-scheme: light)">
+						<img src="img/player_preview_light.gif" alt="Interactive transcript">
+					</picture>
+				</figure>
+
+
+				<li>Review with FSRS. Each card resurfaces right as you're about to forget it.</li>
+
+				<figure class="shot">
+					<picture>
+						<source srcset="img/card_review_preview_dark.gif"  media="(prefers-color-scheme: dark)">
+						<source srcset="img/card_review_preview_light.gif" media="(prefers-color-scheme: light)">
+						<img src="img/card_review_preview_light.gif" alt="Card review">
+					</picture>
+				</figure>
+			</ol>
+
+			<h2>Versus</h2>
+			<p>
+				Players pool words from their own decks and race to fill in the blanks.
+				The words you mined are the words you're tested on and the ones of your adversary.
+				<figure class="shot">
+					<picture>
+						<source srcset="img/versus_preview_dark.gif"  media="(prefers-color-scheme: dark)">
+						<source srcset="img/versus_preview_light.gif" media="(prefers-color-scheme: light)">
+						<img src="img/versus_preview_light.gif" alt="Versus">
+					</picture>
+				</figure>
+			</p>
+
+			<h2>Dictionary data</h2>
+			<p>
+				Dictionary content is derived from JMdict, the property of the EDRDG,
+				used under CC BY-SA 4.0. The generated dictionary database is a derivative
+				of JMdict and is distributed under
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+				Source data from
+				<a href="https://github.com/scriptin/jmdict-simplified">scriptin/jmdict-simplified</a>.
+			</p>
+		</div>
+	</main>
+</body>
+</html>

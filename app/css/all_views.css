@@ -1,0 +1,134 @@
+/*
+*	Styling common to all views.
+*/
+
+#view {
+	display: grid;
+	grid-template-columns: [main] minmax(0, 750px);
+	grid-template-rows: minmax(0, 1fr);
+}
+
+/*
+*	Every view is a direct child of #view and sits in the main column.
+*/
+#view > * {
+	grid-column: main;
+	min-width: 0;
+	min-height: 0;
+}
+
+#not-found {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+#not-found .error-message {
+	background-color: var(--color-accent-interact-active);
+	color: var(--color-accent-light);
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+/*
+*	Auth overlay
+*/
+
+#auth-view {
+	position: fixed;
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 1rem;
+
+	z-index: 100;
+
+	backdrop-filter: blur(5px);
+}
+
+#auth-view > #auth-form-container {
+	display: flex;
+	flex-flow: column nowrap;
+
+	width: 100%;
+	max-width: 400px;
+
+	padding: 0.5rem;
+
+	background-color: var(--color-accent-light);
+	border: 2px solid var(--color-accent-dark);
+}
+
+#auth-view > #auth-form-container > form {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#auth-view > #auth-form-container > form.hidden { display: none; }
+
+#auth-view > #auth-form-container > #auth-user-pre-message {
+	text-align: center;
+	font-weight: 600;
+}
+
+#auth-view > #auth-form-container > #auth-user-post-message {
+	text-align: center;
+	margin: 30px 0 5px 0;
+}
+
+/*
+*	Notifications
+*/
+
+.notification {
+	background-color: var(--color-accent-light);
+
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	right: 1rem;
+
+	max-width: 450px;
+	margin-inline: auto;
+
+	overflow-wrap: break-word;
+
+	user-select: none;
+	pointer-events: none;
+
+	z-index: 1000;
+
+	opacity: 1;
+	transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.notification > .notification-message {
+	display: block;
+	overflow-wrap: break-word;
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
+
+	color: var(--color-text-secondary);
+}
+
+.notification.fade-out { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+	.notification { transition: none; }
+}
+
+@media (min-width: 35rem) {
+	#view {
+		grid-template-columns: 1fr [main] minmax(400px, 56rem) 1fr;
+	}
+
+	.notification {
+		left: auto;
+		right: 1rem;
+		margin-inline: 0;
+	}
+}

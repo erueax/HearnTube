@@ -1,0 +1,194 @@
+/*
+*	Styling of elements and variable declarations
+*/
+
+:root {
+	--color-bg:                     #fff7fa;
+	--color-accent-light:           #fceef3;
+	--color-accent-dark:            #f4d7e0;
+	--color-accent-interact:        #eaa1b8;
+	--color-accent-interact-hover:  #de8fa7;
+	--color-accent-interact-active: #d17e97;
+
+	--color-text:                   #77656a;
+	--color-text-secondary:         #9d7b84;
+
+	--color-hover:                  rgba(0, 0, 0, .05);
+	--color-hairline:               rgba(0, 0, 0, .07);
+
+	--font-display: 'Instrument Serif', Georgia, serif;
+	--font-sans: 'Instrument Sans', system-ui, sans-serif;
+}
+
+:root[data-theme="dark"] {
+	--color-bg:                     #150f11;
+	--color-accent-light:           #2a1d21;
+	--color-accent-dark:            #3a1d28;
+	--color-accent-interact:        #e57e9c;
+	--color-accent-interact-hover:  #eb9cb3;
+	--color-accent-interact-active: #f1b9ca;
+
+	--color-text:                   #ece1e5;
+	--color-text-secondary:         #b398a0;
+
+	--color-hover:                  rgba(255, 255, 255, .06);
+	--color-hairline:               rgba(255, 255, 255, .08);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-bg:                     #150f11;
+		--color-accent-light:           #2a1d21;
+		--color-accent-dark:            #3a1d28;
+		--color-accent-interact:        #e57e9c;
+		--color-accent-interact-hover:  #eb9cb3;
+		--color-accent-interact-active: #f1b9ca;
+
+		--color-text:                   #ece1e5;
+		--color-text-secondary:         #b398a0;
+
+		--color-hover:                  rgba(255, 255, 255, .06);
+		--color-hairline:               rgba(255, 255, 255, .08);
+	}
+}
+
+:root[data-theme="light"] {
+	--color-bg:                     #fff7fa;
+	--color-accent-light:           #fceef3;
+	--color-accent-dark:            #f4d7e0;
+	--color-accent-interact:        #eaa1b8;
+	--color-accent-interact-hover:  #de8fa7;
+	--color-accent-interact-active: #d17e97;
+
+	--color-text:                   #77656a;
+	--color-text-secondary:         #9d7b84;
+
+	--color-hover:                  rgba(0, 0, 0, .05);
+	--color-hairline:               rgba(0, 0, 0, .07);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100dvh;
+ 
+	background-color: var(--color-bg);
+	color: var(--color-text);
+ 
+	-webkit-font-smoothing: antialiased;
+	font-family: var(--font-sans);
+	font-size: 20px;
+ 
+	overflow: hidden;
+}
+ 
+input, textarea, select, button {
+	max-width: 100%;
+	min-width: 0;
+	margin: 0px; /* 2px; */
+	border-radius: 5px;
+}
+ 
+input, textarea, select {
+	font-size: inherit;
+	background-color: var(--color-bg);
+	border: 2px solid var(--color-accent-dark);
+	padding: 0.5rem 0 0.5rem 0.4rem;
+ 
+	color: var(--color-text);
+ 
+	font-family: var(--font-mono);
+	caret-color: var(--color-accent-interact);
+}
+ 
+button {
+	font-size: inherit;
+	font-weight: bold;
+	background-color: var(--color-accent-interact);
+	border: 2px solid var(--color-accent-interact-active);
+	color: var(--color-bg);
+	cursor: pointer;
+	padding: 0.5rem 0.3rem;
+ 
+	border-radius: 5px;
+ 
+	transition: transform 120ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 120ms ease-out;
+}
+ 
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+	outline: none;
+	border-color: var(--color-accent-interact);
+}
+ 
+input::placeholder, textarea::placeholder {
+	color: var(--color-text-secondary);
+}
+ 
+button:hover { background-color: var(--color-accent-interact-hover); }
+ 
+button:active {
+	background-color: var(--color-accent-interact-active);
+	transform: translateY(2px);
+}
+ 
+p { text-wrap: pretty; }
+ 
+a,
+a:link,
+a:visited {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+ 
+a:focus-visible {
+	outline: 2px solid var(--color-accent-interact);
+	outline-offset: 2px;
+}
+ 
+/* Anything given role="button" and tabindex must show its focus. */
+[tabindex]:focus-visible,
+[role="button"]:focus-visible {
+	outline: 2px solid var(--color-accent-interact);
+	outline-offset: -2px;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent-interact) transparent;
+}
+
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+	background: var(--color-accent-dark);
+	border-radius: 99px;
+	border: 2px solid var(--color-bg);
+}
+*::-webkit-scrollbar-thumb:hover  { background: var(--color-accent-interact); }
+*::-webkit-scrollbar-thumb:active { 
+	background: var(--color-accent-interact-active); 
+}
+
+[type="search"]::-webkit-search-cancel-button {
+    background-color: var(--color-accent-interact-active);
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+	button { transition: none; }
+}
+ 
+/*
+*	WIDE SCREEN
+*/
+ 
+@media (min-width: 35rem) {
+	body { font-size: 24px; }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta 
+		http-equiv="Content-Security-Policy"
+      	content="script-src 'self' https://www.youtube.com https://s.ytimg.com;
+            frame-src https://www.youtube.com;"
+	>
+	<title>HearnTube</title>
+	
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/views.css">
+	
+	<script type="module" src="./js/main.js"></script>
+
+	<link rel="modulepreload" href="./js/utils/auth.js">
+	<link rel="modulepreload" href="./js/utils/template.js">
+	<link rel="modulepreload" href="./js/utils/notif.js">
+	<link rel="modulepreload" href="./js/utils/cookie.js">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+	<script src="/app/js/vendor/chart.umd.js"></script>
+	
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+</head>
+<body>
+	<div id="nav">
+		<div class="nav-app">
+			<a href="/app/home">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+					stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+					role="img">
+					<path d="M3 10.5 12 3.5l9 7" />
+					<path d="M5.5 9.8V19.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.8" />
+				</svg>
+			</a>
+			<a href="/app/player">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+					stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+					role="img">
+					<path d="M6.8 4.4 20 12 6.8 19.6Z" />
+				</svg>
+			</a>
+			<a href="/app/cards">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+					stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+					role="img">
+					<rect x="9" y="3.5" width="11" height="14.5" rx="2" transform="rotate(12 14.5 10.75)" />
+					<rect x="4" y="7" width="12" height="14" rx="2" />
+				</svg>
+			</a>
+			<a href="/app/versus">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+					stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+					role="img">
+					<path d="M2.8 6 7.3 17.5 11.8 6" />
+					<path
+						d="M20 9c0-1.7-1.6-3-3.5-3S13 7.3 13 9s1.6 3 3.5 3 3.5 1.3 3.5 3-1.6 3-3.5 3S13 16.7 13 15" />
+				</svg>
+			</a>
+		</div>
+		<div class="nav-options">
+			<a id="options-icon" href="/app/options">
+				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+					stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+					role="img">
+					<path
+						d="M21.13 10.23A9.3 9.3 0 0 1 21.13 13.77L18.04 13.96A6.35 6.35 0 0 1 17.66 14.88L19.71 17.2A9.3 9.3 0 0 1 17.2 19.71L14.88 17.66A6.35 6.35 0 0 1 13.96 18.04L13.77 21.13A9.3 9.3 0 0 1 10.23 21.13L10.04 18.04A6.35 6.35 0 0 1 9.12 17.66L6.8 19.71A9.3 9.3 0 0 1 4.29 17.2L6.34 14.88A6.35 6.35 0 0 1 5.96 13.96L2.87 13.77A9.3 9.3 0 0 1 2.87 10.23L5.96 10.04A6.35 6.35 0 0 1 6.34 9.12L4.29 6.8A9.3 9.3 0 0 1 6.8 4.29L9.12 6.34A6.35 6.35 0 0 1 10.04 5.96L10.23 2.87A9.3 9.3 0 0 1 13.77 2.87L13.96 5.96A6.35 6.35 0 0 1 14.88 6.34L17.2 4.29A9.3 9.3 0 0 1 19.71 6.8L17.66 9.12A6.35 6.35 0 0 1 18.04 10.04Z" />
+					<circle cx="12" cy="12" r="3.2" />
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div id="view"></div>
+</body>
+</html>
